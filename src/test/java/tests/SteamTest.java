@@ -23,7 +23,7 @@ public class SteamTest {
     public void setUp(){
         SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://store.steampowered.com/");
-        mainPage.clickByLinkSelectLanguage().changeLanguage("Русский (Russisch)");
+        mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
     }
 
     @Test

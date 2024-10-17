@@ -18,7 +18,11 @@ public class MainPage {
 
             selectedLanguage = $("#language_dropdown"),
 
-            linkShop = $x("(.//*[@href='https://store.steampowered.com/?snr=1_4_4__global-header'])[2]");
+            linkShop = $x("(.//*[@href='https://store.steampowered.com/?snr=1_4_4__global-header'])[2]"),
+
+             selectedLanguage2 = $x(".//*[@href='?l=russian']");
+
+
 
 
 
@@ -51,7 +55,8 @@ public class MainPage {
     }
 
     public MainPage changeLanguage(String language) {
-        selectedLanguage.find(byText((language))).click();
+     //   selectedLanguage.find(byText((language))).click();
+        selectedLanguage.find("[href='?l="+language+"']");
         return this;
     }
 
