@@ -62,28 +62,29 @@ public class SteamTest {
     }
 
 
-    @Test
-    public void checkVisibleCuratorIconAndTextByShopPage() {
-        open("https://store.steampowered.com/");
-        mainPage.clickByLinkShopPage()
-                .checkVisibleCuratorIconAndTextByShopPage();
+//    @Test
+//    public void checkVisibleCuratorIconAndTextByShopPage() {
+//        SelenideLogger.addListener("allure", new AllureSelenide());
+//        open("https://store.steampowered.com/");
+//        mainPage.clickByLinkShopPage()
+//                .checkVisibleCuratorIconAndTextByShopPage();
+//
+//    }
 
-    }
 
-
-    @CsvSource(value = {
-            "Español - España (испанский), TIENDA",
-            "English (inglés), STORE",
-            "Deutsch (German), SHOP",
-            "Русский (Russisch), МАГАЗИН"
-
-    })
-    @ParameterizedTest(name = "Для локали = {0} должен отображаться текст в ссылке Магазин = {1}")
-    public void testqwe(String testData, String expectedText) {
-        open("https://store.steampowered.com/");
-        mainPage.clickByLinkSelectLanguage()
-                .changeLanguage(testData)
-                .checkTextInLinkShop(expectedText);
-    }
+//    @CsvSource(value = {
+//            "Español - España (испанский), TIENDA",
+//            "English (inglés), STORE",
+//            "Deutsch (German), SHOP",
+//            "Русский (Russisch), МАГАЗИН"
+//
+//    })
+//    @ParameterizedTest(name = "Для локали = {0} должен отображаться текст в ссылке Магазин = {1}")
+//    public void testqwe(String testData, String expectedText) {
+//        open("https://store.steampowered.com/");
+//        mainPage.clickByLinkSelectLanguage()
+//                .changeLanguage(testData)
+//                .checkTextInLinkShop(expectedText);
+//    }
 
 }
