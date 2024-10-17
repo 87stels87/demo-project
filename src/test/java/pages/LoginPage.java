@@ -16,7 +16,6 @@ public class LoginPage {
 
     invalidMessageByInvalidLoginOrPassword = $x(".//*[text()='Пожалуйста, проверьте свой пароль и имя аккаунта и попробуйте снова.']");
 
-
     public LoginPage setLoginAndPassword(String login, String password) {
         loginForm.setValue(login);
         passwordForm.setValue(password);
