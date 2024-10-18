@@ -11,7 +11,7 @@ public class MainPage {
     private final String BASE_URL = "https://store.steampowered.com/";
     private SelenideElement
             linkToLoginPage = $("[class='global_action_link']");
-    private SelenideElement sectionShop = $x("(.//*[@class='pulldown_desktop'])[1]");
+    private SelenideElement sectionShop = $("[id='foryou_tab']");
     private SelenideElement linkToSupportPage = $x("(.//*[@class='menuitem '])[4]");
     private SelenideElement linkShopPageThroughTheSectionCuratorsSteam = $x(".//*[@class='popup_menu_item' and contains(text(), 'Кураторы Steam')]");
 
