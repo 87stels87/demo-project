@@ -1,9 +1,11 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,11 @@ public class SteamTest {
     MainPage mainPage = new MainPage();
     SupportPage supportPage = new SupportPage();
 
+
+    @BeforeAll
+    public static void setupBrowser() {
+        Configuration.browser = "chrome";
+    }
     @BeforeEach
     public void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -68,12 +75,12 @@ public class SteamTest {
     }
 
 
-//    @Test
-//    public void checkVisibleCuratorIconAndTextByShopPage() {
-//        mainPage.clickByLinkShopPage()
-//                .checkVisibleCuratorIconAndTextByShopPage();
-//
-//    }
+    @Test
+    public void checkVisibleCuratorIconAndTextByShopPage() {
+        mainPage.clickByLinkShopPage()
+                .checkVisibleCuratorIconAndTextByShopPage();
+
+    }
 
 
     @CsvSource(value = {
