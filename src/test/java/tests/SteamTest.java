@@ -20,14 +20,16 @@ public class SteamTest {
     SupportPage supportPage = new SupportPage();
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://store.steampowered.com/");
-        mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
+        if (!mainPage.language_pulldown.getText().equals("язык"))
+            mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
     }
 
     @Test
     public void negativeAuthorizationWithInvalidLogin() {
+
         mainPage.clickByLinkLoginPage()
                 .setLoginAndPassword("login", "x")
                 .checkInvalidLoginMessage();
@@ -75,10 +77,10 @@ public class SteamTest {
 
 
     @CsvSource(value = {
-            "Español - España (испанский), TIENDA",
-            "English (inglés), STORE",
-            "Deutsch (German), SHOP",
-            "Русский (Russisch), МАГАЗИН"
+            "spanish, TIENDA",
+            "english, STORE",
+            "german, SHOP",
+            "turkish, MAĞAZA      "
 
     })
     @ParameterizedTest(name = "Для локали = {0} должен отображаться текст в ссылке Магазин = {1}")
