@@ -15,6 +15,5 @@ public class ShopPage {
     public ShopPage checkVisibleCuratorIconAndTextByShopPage() {
         curatorLinkByIgromaniya.shouldBe(visible);
         return this;
-
     }
 }

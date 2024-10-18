@@ -14,6 +14,7 @@ public class MainPage {
     private SelenideElement linkToSupportPage = $x("(.//*[@class='menuitem '])[4]");
     private SelenideElement linkShopPageThroughTheSectionCuratorsSteam = $x(".//*[@class='popup_menu_item' and contains(text(), 'Кураторы Steam')]");
 
+    private SelenideElement linkShopPageThroughTheSectionCuratorsSteam2 = $("[href='https://store.steampowered.com/curators/?snr=1_4_4__12']");
     private SelenideElement selectLanguageButton = $("[id='language_pulldown']");
 
     private SelenideElement selectedLanguage = $("#language_dropdown");
@@ -40,7 +41,7 @@ public class MainPage {
     public ShopPage clickByLinkShopPage() {
 //        open(BASE_URL);
         sectionShop.hover();
-        linkShopPageThroughTheSectionCuratorsSteam.click();
+        linkShopPageThroughTheSectionCuratorsSteam2.click();
         ShopPage shopPage = page(ShopPage.class);
         return shopPage;
     }
