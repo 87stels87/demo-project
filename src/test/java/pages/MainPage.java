@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -41,6 +42,7 @@ public class MainPage {
     public ShopPage clickByLinkShopPage() {
 //        open(BASE_URL);
         sectionShop.hover();
+        Selenide.sleep(2000);
         linkShopPageThroughTheSectionCuratorsSteam2.click();
         ShopPage shopPage = page(ShopPage.class);
         return shopPage;
