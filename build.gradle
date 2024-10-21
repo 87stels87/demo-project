@@ -27,7 +27,8 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:2.0.16",
             'io.qameta.allure:allure-selenide:2.19.0',
-            'io.github.bonigarcia:webdrivermanager:5.9.2'
+            'io.github.bonigarcia:webdrivermanager:5.9.2',
+            'org.seleniumhq.selenium:selenium-java:4.25.0'
     )
 }
 

@@ -26,9 +26,6 @@ public class SteamTest {
     @BeforeAll
     public static void setupBrowser() {
         Configuration.browser = "chrome";
-        WebDriverManager.chromedriver().driverVersion("129").setup();
-        System.setProperty("chromeoptions.args", "--no-sandbox");
-        Configuration.browserCapabilities.setCapability("acceptInsecureCerts", true);
     }
 
     @BeforeEach
