@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
@@ -25,7 +26,11 @@ public class SteamTest {
     @BeforeAll
     public static void setupBrowser() {
         Configuration.browser = "chrome";
+        WebDriverManager.chromedriver().driverVersion("129").setup();
+        System.setProperty("chromeoptions.args", "--no-sandbox");
+        Configuration.browserCapabilities.setCapability("acceptInsecureCerts", true);
     }
+
     @BeforeEach
     public void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
