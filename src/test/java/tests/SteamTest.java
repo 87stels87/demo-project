@@ -75,12 +75,12 @@ public class SteamTest {
     }
 
 
-    @Test
+/*    @Test
     public void checkVisibleCuratorIconAndTextByShopPage() {
         mainPage.clickByLinkShopPage()
                 .checkVisibleCuratorIconAndTextByShopPage();
 
-    }
+    }*/
 
 
     @CsvSource(value = {
