@@ -41,5 +41,5 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
-   // systemProperties(System.getProperties()) // для гитхаб экшн
+    systemProperties(System.getProperties()) // для гитхаб экшн
 }
