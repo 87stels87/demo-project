@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SupportPage {
     private SelenideElement
-            helpButton = $(" [class='btn_medium btnv6_blue_hoverfade btn_login_nag_right']");
+            helpButton = $("[class='btn_medium btnv6_blue_hoverfade btn_login_nag_right']");
 
     private ElementsCollection
             collectionSupportFields = $$("[class='help_wizard_button help_wizard_arrow_right']");

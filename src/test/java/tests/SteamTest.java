@@ -12,6 +12,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.MainPage;
 import pages.SupportPage;
 
@@ -63,7 +64,7 @@ public class SteamTest {
                 }
         );
         step("Проверяем наименования полей на странице поддержки", () -> {
-                    supportPage.openSupportFields();
+                    supportPage.checkSupportFields();
                 }
         );
 
