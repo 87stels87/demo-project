@@ -61,7 +61,6 @@ public class MainPage {
     }
 
     public void checkTextInLinkShop(String expectedText) {
-        Selenide.sleep(3000);
         linkShop.shouldBe(text(expectedText));
     }
 }

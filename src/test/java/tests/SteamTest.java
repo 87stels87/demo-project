@@ -12,6 +12,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.MainPage;
 import pages.SupportPage;
@@ -26,13 +28,13 @@ public class SteamTest {
 
     @BeforeAll
     public static void setupBrowser() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.browser = "chrome";
         Configuration.headless = true;
     }
 
     @BeforeEach
     public void setUp() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://store.steampowered.com/");
         if (!mainPage.language_pulldown.getText().equals("язык"))
             mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
