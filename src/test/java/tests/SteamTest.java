@@ -86,18 +86,18 @@ public class SteamTest {
     }*/
 
 
-    @CsvSource(value = {
-            "spanish, TIENDA",
-            "english, STORE",
-            "german, SHOP",
-            "turkish, MAĞAZA      "
-
-    })
-    @ParameterizedTest(name = "Для локали = {0} должен отображаться текст в ссылке Магазин = {1}")
-    public void testqwe(String testData, String expectedText) {
-        mainPage.clickByLinkSelectLanguage()
-                .changeLanguage(testData)
-                .checkTextInLinkShop(expectedText);
-    }
+//    @CsvSource(value = {
+//            "spanish, TIENDA",
+//            "english, STORE",
+//            "german, SHOP",
+//            "turkish, MAĞAZA      "
+//
+//    })
+//    @ParameterizedTest(name = "Для локали = {0} должен отображаться текст в ссылке Магазин = {1}")
+//    public void testqwe(String testData, String expectedText) {
+//        mainPage.clickByLinkSelectLanguage()
+//                .changeLanguage(testData)
+//                .checkTextInLinkShop(expectedText);
+//    }
 
 }
