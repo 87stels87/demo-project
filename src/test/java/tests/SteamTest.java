@@ -28,6 +28,7 @@ public class SteamTest {
     public static void setupBrowser() {
         Configuration.browser = "chrome";
         Configuration.headless = true;
+        Configuration.browserSize = "1920x1080";
     }
 
     @BeforeEach
