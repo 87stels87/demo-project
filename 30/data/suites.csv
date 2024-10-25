@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Oct 25 09:15:38 GMT 2024","Fri Oct 25 09:15:41 GMT 2024","3560","","tests.SteamTest","","tests.SteamTest","testqwe","testqwe(String, String) Для локали = turkish должен отображаться текст в ссылке Магазин = MAĞAZA",""
+"passed","Fri Oct 25 09:15:24 GMT 2024","Fri Oct 25 09:15:31 GMT 2024","6571","","tests.SteamTest","","tests.SteamTest","testqwe","testqwe(String, String) Для локали = spanish должен отображаться текст в ссылке Магазин = TIENDA",""
+"passed","Fri Oct 25 09:15:46 GMT 2024","Fri Oct 25 09:15:49 GMT 2024","2411","","tests.SteamTest","","tests.SteamTest","negativeAuthorizationWithInvalidLogin","negativeAuthorizationWithInvalidLogin()",""
+"passed","Fri Oct 25 09:15:41 GMT 2024","Fri Oct 25 09:15:45 GMT 2024","3152","","tests.SteamTest","","tests.SteamTest","checkNameSupportFields1","Тест на проверку наименований пунктов поддержки. Используется степовый подход.",""
+"passed","Fri Oct 25 09:15:34 GMT 2024","Fri Oct 25 09:15:38 GMT 2024","3711","","tests.SteamTest","","tests.SteamTest","testqwe","testqwe(String, String) Для локали = german должен отображаться текст в ссылке Магазин = SHOP",""
+"passed","Fri Oct 25 09:15:45 GMT 2024","Fri Oct 25 09:15:46 GMT 2024","1562","","tests.SteamTest","","tests.SteamTest","checkNameSupportFields2","checkNameSupportFields2()",""
+"passed","Fri Oct 25 09:15:31 GMT 2024","Fri Oct 25 09:15:34 GMT 2024","3359","","tests.SteamTest","","tests.SteamTest","testqwe","testqwe(String, String) Для локали = english должен отображаться текст в ссылке Магазин = STORE",""
