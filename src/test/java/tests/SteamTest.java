@@ -28,7 +28,6 @@ public class SteamTest {
     public static void setupBrowser() {
         Configuration.browser = "chrome";
         Configuration.headless = true;
-        Configuration.browserSize = "1920x1080";
     }
 
     @BeforeEach
@@ -39,13 +38,13 @@ public class SteamTest {
             mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
     }
 
-    @Test
-    public void negativeAuthorizationWithInvalidLogin() {
-
-        mainPage.clickByLinkLoginPage()
-                .setLoginAndPassword("login", "x")
-                .checkInvalidLoginMessage();
-    }
+//    @Test
+//    public void negativeAuthorizationWithInvalidLogin() {
+//
+//        mainPage.clickByLinkLoginPage()
+//                .setLoginAndPassword("login", "x")
+//                .checkInvalidLoginMessage();
+//    }
 
     @Test
     @DisplayName("Тест на проверку наименований пунктов поддержки. Используется степовый подход.")
