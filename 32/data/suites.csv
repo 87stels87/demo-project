@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Oct 25 10:13:27 GMT 2024","Fri Oct 25 10:13:39 GMT 2024","12638","","tests.SteamTest","","tests.SteamTest","checkNameSupportFields1","Тест на проверку наименований пунктов поддержки. Используется степовый подход.",""
+"passed","Fri Oct 25 10:13:44 GMT 2024","Fri Oct 25 10:13:52 GMT 2024","8350","","tests.SteamTest","","tests.SteamTest","negativeAuthorizationWithInvalidLogin","negativeAuthorizationWithInvalidLogin()",""
+"passed","Fri Oct 25 10:13:39 GMT 2024","Fri Oct 25 10:13:44 GMT 2024","4550","","tests.SteamTest","","tests.SteamTest","checkNameSupportFields2","checkNameSupportFields2()",""
