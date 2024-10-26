@@ -50,6 +50,7 @@ public class MainPage {
 
     public MainPage clickByLinkSelectLanguage() {
 //        open(BASE_URL);
+        Selenide.sleep(4000);
         selectLanguageButton.click();
         return this;
     }
