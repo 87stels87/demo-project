@@ -43,7 +43,7 @@ public class SteamTest {
         Attach.screenshotAs("last screen");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
+       // Attach.addVideo();
     }
 
 //    @Test
