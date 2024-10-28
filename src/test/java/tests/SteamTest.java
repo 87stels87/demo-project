@@ -3,13 +3,11 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.Attach;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,16 +26,24 @@ public class SteamTest {
 
     @BeforeAll
     public static void setupBrowser() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.browser = "chrome";
         Configuration.headless = true;
     }
 
     @BeforeEach
     public void setUp() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://store.steampowered.com/");
         if (!mainPage.language_pulldown.getText().equals("язык"))
             mainPage.clickByLinkSelectLanguage().changeLanguage("russian");
+    }
+
+    @AfterEach
+    public void addAttachments(){
+        Attach.screenshotAs("last screen");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 
 //    @Test
