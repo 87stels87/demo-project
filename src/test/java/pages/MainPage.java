@@ -20,7 +20,7 @@ public class MainPage {
 
     private SelenideElement selectedLanguage = $("#language_dropdown");
 
-    private SelenideElement linkShop = $x("(.//*[@href='https://store.steampowered.com/?snr=1_4_4__global-header'])[2]");
+    private SelenideElement linkShop = $x("(.//*[@data-tooltip-content='.submenu_Store'])[2]");
 
     public SelenideElement language_pulldown = $("[id='language_pulldown']");
 

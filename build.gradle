@@ -23,12 +23,12 @@ repositories {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:7.5.1",
+            "com.codeborne:selenide:7.6.0",
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:2.0.16",
             'io.qameta.allure:allure-selenide:2.19.0',
             'io.github.bonigarcia:webdrivermanager:5.9.2',
-            'org.seleniumhq.selenium:selenium-java:4.25.0'
+            'org.seleniumhq.selenium:selenium-java:4.27.0'
     )
 }
 
@@ -42,7 +42,7 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
-    systemProperties(System.getProperties()) // для гитхаб экшн
+    systemProperties(System.getProperties()) // для гитхаб экшн пок
 
     testLogging {
         lifecycle {

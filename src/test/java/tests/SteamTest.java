@@ -16,6 +16,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.MainPage;
 import pages.SupportPage;
 
+import java.util.Map;
+
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
@@ -27,8 +29,16 @@ public class SteamTest {
     @BeforeAll
     public static void setupBrowser() {
         Configuration.browser = "chrome";
-        Configuration.headless = true;
+        Configuration.headless = false;
+//
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
+//        Configuration.browserCapabilities = capabilities;
     }
+
 
     @BeforeEach
     public void setUp() {
@@ -39,11 +49,11 @@ public class SteamTest {
     }
 
     @AfterEach
-    public void addAttachments(){
+    public void addAttachments() {
         Attach.screenshotAs("last screen");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-       // Attach.addVideo();
+//        Attach.addVideo();
     }
 
 //    @Test
