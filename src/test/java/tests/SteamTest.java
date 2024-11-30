@@ -32,12 +32,12 @@ public class SteamTest {
         Configuration.headless = false;
         Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
 
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+        Configuration.browserCapabilities = capabilities;
     }
 
 
@@ -54,7 +54,7 @@ public class SteamTest {
         Attach.screenshotAs("last screen");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-//        Attach.addVideo();
+        Attach.addVideo();
     }
 
 //    @Test
