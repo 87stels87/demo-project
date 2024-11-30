@@ -30,7 +30,7 @@ public class SteamTest {
     public static void setupBrowser() {
         Configuration.browser = "chrome";
         Configuration.headless = false;
-//        Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
+        Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
 
 //        DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
