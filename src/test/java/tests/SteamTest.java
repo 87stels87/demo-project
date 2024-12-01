@@ -29,7 +29,7 @@ public class SteamTest {
     @BeforeAll
     public static void setupBrowser() {
         Configuration.browser = "chrome";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
         Configuration.webdriverLogsEnabled = true;
 
