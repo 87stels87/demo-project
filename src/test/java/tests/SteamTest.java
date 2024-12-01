@@ -31,6 +31,7 @@ public class SteamTest {
         Configuration.browser = "chrome";
         Configuration.headless = true;
         Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
+        Configuration.webdriverLogsEnabled = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
