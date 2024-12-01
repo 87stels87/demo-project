@@ -31,7 +31,7 @@ public class SteamTest {
         Configuration.browser = "chrome";
         Configuration.browserVersion = "100.0";
         Configuration.browserSize="1920x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
