@@ -33,7 +33,7 @@ public class SteamTest {
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.headless = false;
      //  Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
-        Configuration.remote = System.getProperty("http://176.108.250.152:4444/wd/hub/");
+        Configuration.remote = System.setProperty("remote", "http://176.108.250.152:4444/wd/hub/");
         Configuration.webdriverLogsEnabled = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
