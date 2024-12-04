@@ -32,7 +32,8 @@ public class SteamTest {
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.headless = false;
-        Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
+      //  Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
+        Configuration.remote = System.getProperty("selenide.remote");
         Configuration.webdriverLogsEnabled = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -55,9 +56,9 @@ public class SteamTest {
     @AfterEach
     public void addAttachments() {
         Attach.screenshotAs("last screen");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+//        Attach.pageSource();
+//        Attach.browserConsoleLogs();
+//        Attach.addVideo();
     }
 
 //    @Test
