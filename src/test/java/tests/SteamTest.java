@@ -56,9 +56,9 @@ public class SteamTest {
     @AfterEach
     public void addAttachments() {
         Attach.screenshotAs("last screen");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 
 //    @Test
