@@ -29,10 +29,12 @@ public class SteamTest {
     @BeforeAll
     public static void setupBrowser() {
 
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+//        Configuration.browser = System.getProperty("browser");
+        Configuration.browser = "chrome";
+//        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserVersion = "128.0";
         Configuration.headless = false;
-      //  Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
+//        Configuration.remote = "http://176.108.250.152:4444/wd/hub/";
         Configuration.remote = System.getProperty("selenide.remote");
         Configuration.webdriverLogsEnabled = true;
 
